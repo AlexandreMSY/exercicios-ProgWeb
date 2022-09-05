@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id="containerInputValores">
+            <span>
+                <strong>Valor 1:</strong>
+                <input type="number" id="valor1">
+            </span>
+            <span>
+                <strong>Valor 2:</strong>
+                <input type="number" id="valor2">
+            </span>
+        </form>
+        <form>
+            <p><strong>Opções</strong></p>
+            <input type="radio" name="opcao" id="soma" value="soma">
+            <label for="soma">Soma</label><br>
+            <input type="radio" name="opcao" id="subtracao" value="subtracao">
+            <label for="subtracao">Subtracão</label><br>
+            <input type="radio" name="opcao" id="multiplicacao" value="multiplicacao">
+            <label for="multplicacao">Multiplicação</label><br>
+            <input type="radio" name="opcao" id="divisao" value="divisao">
+            <label for="divisao">Divisão</label><br>
+        </form>
+        <p><strong>Resultado:</strong></p>
+        <input type="number" id="resultado"><br>
+        <button onclick="calcular()">Calcular</button>
+    </div>
+</body>
+</html>
