@@ -1,0 +1,53 @@
+<!--
+03 - Crie uma página web que recebe a data de nascimento e
+também a data atual. E exiba a idade da pessoa em dias.
+Considerar que os anos possuem 365, meses possuem 30 dias.
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Soma de valores</title>
+<script>
+    window.onload = function(){
+        let btn = document.getElementById("botao");
+        btn.onclick = function (){
+            const UM_ANO_MILISEGUNDOS = 31_556_952_000
+
+            let diaNasc = document.getElementById("diaNasc").value;
+            let mesNasc = document.getElementById("mesNasc").value;
+            let anoNasc = document.getElementById("anoNasc").value;
+
+            let diaAtual = document.getElementById("diaAtual").value;
+            let mesAtual = document.getElementById("mesAtual").value;
+            let anoAtual = document.getElementById("anoAtual").value;
+
+            //.... continue ....
+            
+            let dataNascimento = new Date(anoNasc, mesNasc - 1, diaNasc);
+            let dataAtual = new Date(anoAtual, mesAtual - 1, diaAtual);
+            let milisegundos = dataAtual - dataNascimento;
+            let idade = Math.floor(milisegundos / UM_ANO_MILISEGUNDOS);
+            
+            document.getElementById("res").value = idade;
+ }
+    }
+</script>
+</head>
+
+<body>
+<br/>
+	<h2>Idade em Dias</h2>
+        Dia: <input type="text" id="diaNasc" value="" /> <br/>
+        Mês: <input type="text" id="mesNasc" value="" /> <br/>
+        Ano: <input type="text" id="anoNasc" value="" /> <br/>
+
+        Dia: <input type="text" id="diaAtual" value="" /> <br/>
+        Mês: <input type="text" id="mesAtual" value="" /> <br/>
+        Ano: <input type="text" id="anoAtual" value="" /> <br/>
+
+        Resultado: <input type="text" id="res" value="" disabled/> <br/>
+        <input type="button" id="botao" value="Executar" /> <br/>
+</body>
+</html>
